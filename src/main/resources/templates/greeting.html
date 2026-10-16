@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="'Hello, ' + ${name} + '!'">Hello!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="aurora"></div>
+<canvas id="stars"></canvas>
+<canvas id="confetti"></canvas>
+
+<main class="card">
+    <div class="crown">👑</div>
+    <p class="hello">Hello</p>
+    <h1 class="name" th:text="${name}">Friend</h1>
+    <p class="tagline" th:text="${tagline}">The universe bows.</p>
+    <div class="actions">
+        <a class="btn" th:href="@{/}">Greet Another Legend</a>
+    </div>
+</main>
+
+<script th:src="@{/js/effects.js}"></script>
+</body>
+</html>

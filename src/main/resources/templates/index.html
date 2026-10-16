@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello, Magnificent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="aurora"></div>
+<canvas id="stars"></canvas>
+
+<main class="card">
+    <div class="crown">👑</div>
+    <h1>Who Approaches?</h1>
+    <p class="subtitle">Announce yourself and receive a greeting worthy of legend.</p>
+
+    <form th:action="@{/greet}" th:object="${form}" method="post" novalidate>
+        <input type="text" th:field="*{name}" placeholder="Enter your name" maxlength="50" autofocus autocomplete="given-name" aria-label="Your name">
+        <p class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+        <button type="submit" class="btn">✨ Greet Me Magnificently ✨</button>
+    </form>
+</main>
+
+<script th:src="@{/js/effects.js}"></script>
+</body>
+</html>
