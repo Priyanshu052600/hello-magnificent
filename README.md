@@ -1,5 +1,8 @@
 # Hello, Magnificent ✨
 
+[![CI](https://github.com/Priyanshu052600/hello-magnificent/actions/workflows/ci.yml/badge.svg)](https://github.com/Priyanshu052600/hello-magnificent/actions/workflows/ci.yml)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Priyanshu052600/hello-magnificent)
+
 A Spring Boot MVC app that asks for your name and greets you in grand style:
 a starfield, an aurora, gold letters revealed one by one, and confetti bursts.
 Click anywhere on the greeting page for more confetti.
